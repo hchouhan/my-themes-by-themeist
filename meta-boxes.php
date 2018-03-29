@@ -43,7 +43,7 @@ function themeist_themes_display_theme_info_meta_box( $object, $box ) { ?>
 	<p>
 		<label for="theme-version">Version</label>
 		<br />
-		<input type="text" name="theme-version" id="theme-version" value="<?php echo esc_attr( get_post_meta( $object->ID, 'theme_version_number', true ) ); ?>" size="30" tabindex="30" style="width: 99%;" />
+		<input type="text" name="theme-version" id="theme-version" value="<?php echo esc_attr( get_post_meta( $object->ID, 'theme_version', true ) ); ?>" size="30" tabindex="30" style="width: 99%;" />
 	</p>
 	<p>
 		<label for="theme-demo-link">Demo URL</label>
@@ -58,7 +58,7 @@ function themeist_themes_display_theme_info_meta_box( $object, $box ) { ?>
 	<p>
 		<label for="theme-price">Price</label>
 		<br />
-		<input type="text" name="theme-price" id="theme-price" value="<?php echo esc_attr( get_post_meta( $object->ID, 'theme_price_number', true ) ); ?>" size="30" tabindex="30" style="width: 99%;" />
+		<input type="text" name="theme-price" id="theme-price" value="<?php echo esc_attr( get_post_meta( $object->ID, 'theme_price', true ) ); ?>" size="30" tabindex="30" style="width: 99%;" />
 	</p>
 <?php }
 
@@ -81,8 +81,8 @@ function themeist_themes_save_theme_info_meta_box( $post_id, $post ) {
 	$meta = array(
 		'theme_buy_url' => esc_attr( strip_tags( $_POST['theme-buy-link'] ) ),
 		'theme_demo_url' => esc_attr( strip_tags( $_POST['theme-demo-link'] ) ),
-		'theme_version_number' => strip_tags( $_POST['theme-version'] ),
-		'theme_price_number' => strip_tags( $_POST['theme-price'] ),
+		'theme_version' => strip_tags( $_POST['theme-version'] ),
+		'theme_price' => strip_tags( $_POST['theme-price'] ),
 	);
 
 	foreach ( $meta as $meta_key => $new_meta_value ) {
