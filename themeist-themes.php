@@ -53,7 +53,7 @@ class Themeist_Themes {
 			require_once( THEMIST_THEMES_DIR . 'admin.php' );
 
 			/* Load meta boxes. */
-			//require_once( THEMIST_THEMES_DIR . 'meta-boxes.php' );
+			require_once( THEMIST_THEMES_DIR . 'meta-boxes.php' );
 		}
 	}
 
